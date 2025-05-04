@@ -26,6 +26,26 @@
   ],
   "exports": {
     ".": "./dist/index.js",
+    "./v10": "./dist/v10.js",
+    "./v11": "./dist/v11.js",
+    "./v12": "./dist/v12.js",
+    "./v12.1": "./dist/v12.1.js",
+    "./v13": "./dist/v13.js",
+    "./v14": "./dist/v14.js",
+    "./v15": "./dist/v15.js",
+    "./v15.1": "./dist/v15.1.js",
+    "./v16": "./dist/v16.js",
+    "./v4.1": "./dist/v4.1.js",
+    "./v5": "./dist/v5.js",
+    "./v5.1": "./dist/v5.1.js",
+    "./v5.2": "./dist/v5.2.js",
+    "./v6": "./dist/v6.js",
+    "./v6.1": "./dist/v6.1.js",
+    "./v6.2": "./dist/v6.2.js",
+    "./v6.3": "./dist/v6.3.js",
+    "./v7": "./dist/v7.js",
+    "./v8": "./dist/v8.js",
+    "./v9": "./dist/v9.js",
     "./package.json": "./package.json"
   },
   "main": "./dist/index.js",
@@ -45,7 +65,7 @@
     "typecheck": "tsc --noEmit",
     "gen:data-files": "ucd generate --output-dir=./data-files all",
     "gen:fields": "ucd codegen fields ./data-files --bundle \"./src/v{version}.ts\"",
-    "update-index": "tsx ./scripts/update-index.ts"
+    "update-exports": "tsx ./scripts/update-exports.ts"
   },
   "dependencies": {
     "farver": "^0.4.2",
