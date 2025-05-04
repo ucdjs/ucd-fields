@@ -14,11 +14,23 @@ npm install @ucdjs/ucd-fields
 ## Usage
 
 ```ts
-import { ArabicShaping, BidiBrackets } from "@ucdjs/ucd-fields/v16.0.0";
+import type { ArabicShaping, BidiBrackets } from "@ucdjs/ucd-fields/v16";
+import { ARABIC_SHAPING_FIELDS, BIDI_BRACKETS_FIELDS } from "@ucdjs/ucd-fields/v16";
 
-console.log(ArabicShaping); // { "0": "No Arabic Shaping", "1": "Arabic Shaping" }
-console.log(BidiBrackets); // { "0": "No Bidi Brackets", "1": "Bidi Brackets" }
+console.log(ARABIC_SHAPING_FIELDS);
+// => [
+//     "code_point",
+//     "schematic_name",
+//     "joining_type",
+//     "joining_group"
+// ]
 
+console.log(BIDI_BRACKETS_FIELDS);
+// => [
+//   "code_point",
+//   "bidi_paired_bracket",
+//   "bidi_paired_bracket_type"
+// ]
 ```
 
 ## 📄 License
