@@ -43,7 +43,9 @@
     "test": "vitest --run",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "gen:data-files": "npx @ucdjs/cli@latest generate --output-dir=./data-files all"
+    "gen:data-files": "ucd generate --output-dir=./data-files all",
+    "gen:fields": "ucd codegen fields ./data-files --bundle \"./src/v{version}.ts\"",
+    "update-index": "tsx ./scripts/update-index.ts"
   },
   "dependencies": {
     "farver": "^0.4.2",
@@ -53,9 +55,11 @@
     "@luxass/eslint-config": "^4.18.1",
     "@types/node": "^22.10.9",
     "@types/yargs-parser": "^21.0.3",
+    "@ucdjs/cli": "^0.1.2",
     "eslint": "^9.25.1",
     "publint": "^0.3.12",
     "tsdown": "^0.9.8",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3",
     "vitest": "^3.1.2"
   }
