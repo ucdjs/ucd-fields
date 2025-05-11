@@ -5,6 +5,10 @@
 
 UCD (Unicode Character Database) fields for JavaScript.
 
+> [!IMPORTANT]
+> This is still in an very early development cycle! Currently this is generated using LLM's so there may be issues.
+> We will work on getting it to be 100% reliable in the coming days.
+
 ## Installation
 
 ```bash
