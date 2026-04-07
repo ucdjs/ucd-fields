@@ -8,7 +8,7 @@
     "email": "lucasnrgaard@gmail.com",
     "url": "https://luxass.dev"
   },
-  "packageManager": "pnpm@10.9.0",
+  "packageManager": "pnpm@10.33.0",
   "license": "MIT",
   "homepage": "https://github.com/ucdjs/ucd-fields#readme",
   "repository": {
@@ -59,28 +59,18 @@
   ],
   "scripts": {
     "build": "tsdown",
-    "dev": "tsdown --watch",
-    "test": "vitest --run",
-    "lint": "eslint .",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "typecheck": "tsc --noEmit",
-    "gen:data-files": "ucd generate --output-dir=./data-files all",
-    "gen:fields": "ucd codegen fields ./data-files --bundle \"./src/v{version}.ts\"",
-    "update-exports": "tsx ./scripts/update-exports.ts"
-  },
-  "dependencies": {
-    "farver": "^0.4.2",
-    "yargs-parser": "^21.1.1"
+    "gen:fields": "ucd codegen fields --bundle \"./src/v{version}.ts\""
   },
   "devDependencies": {
-    "@luxass/eslint-config": "^4.18.1",
-    "@types/node": "^22.10.9",
-    "@types/yargs-parser": "^21.0.3",
-    "@ucdjs/cli": "^0.1.3",
-    "eslint": "^9.25.1",
-    "publint": "^0.3.12",
-    "tsdown": "^0.9.8",
-    "tsx": "^4.19.4",
-    "typescript": "^5.8.3",
-    "vitest": "^3.1.2"
+    "@types/node": "catalog:types",
+    "@ucdjs/cli": "catalog:pipelines",
+    "publint": "catalog:dev",
+    "tsdown": "catalog:dev",
+    "typescript": "catalog:dev"
   }
 }
